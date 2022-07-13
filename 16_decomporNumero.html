@@ -1,0 +1,20 @@
+<script>
+    // Leia um número inteiro menor que 1000
+    // e devolva a quantidade de centenas, dezenas e unidades do mesmo.
+    // Obs.: não utilize operações com strings.
+
+    // Entrada
+    let numero = Number(prompt("Número [0-1000]:"))
+
+    // Processamento
+    const centenas = Math.floor(numero / 100)
+    numero = numero % 100
+    const dezenas = Math.floor(numero / 10)
+    const unidades = numero % 10
+
+    // Saída
+    document.write(`<h3>Decomposição de número</h3>`)
+    document.write(`Centenas: ${centenas}<br/>`)
+    document.write(`Dezenas: ${dezenas}<br/>`)
+    document.write(`Unidades: ${unidades}<br/>`)
+</script>

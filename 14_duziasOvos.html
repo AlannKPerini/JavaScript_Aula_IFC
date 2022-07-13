@@ -1,0 +1,18 @@
+<script>
+    // Receba o número de ovos e devolva a quantidade de dúzias correspondente.
+    // Considere sempre dúzias cheias, arredondando pra cima se necessário.
+
+    // Entrada
+    const ovos = Number(prompt("Quantidade de ovos:"))
+
+    // Processamento
+    // Constantes
+    const elementosEmUmaDuzia = 12
+
+    const duzias = Math.ceil(ovos / elementosEmUmaDuzia)
+
+    // Saída
+    document.write(`<h3>Dúzias</h3>`)
+    document.write(`Ovos: ${ovos}<br/>`)
+    document.write(`Dúzias: ${duzias}<br/>`)
+</script>

@@ -1,0 +1,33 @@
+<script>
+    // Recebe as notas das 2 provas e 2 exercícios de programação
+    // e retorna se o aluno foi ou não aprovado.
+    // As provas têm peso 7 e os exercícios têm peso 3.
+    // Cada parcial tem peso igual.
+    // Uma forma de resolver é calcular a 1a parcial,
+    // com a média ponderada entre  p1 e ep1, depois calcular a 2a parcial,
+    // com as notas de p2 e ep2 e depois
+    // calcular a média aritmética entre a 1a e a 2a parcial.
+    // A média para passar é 6.0
+
+    // Entrada
+    const prova1 = Number(prompt("Prova 1:"))
+    const exercicio1 = Number(prompt("Exercício 1:"))
+    const prova2 = Number(prompt("Prova 2:"))
+    const exercicio2 = Number(prompt("Exercício 2:"))
+
+    // Processamento
+    const pesoProva = 7
+    const pesoExercicio = 3
+    const parcial1 =
+        (prova1 * pesoProva + exercicio1 * pesoExercicio) /
+        (pesoProva + pesoExercicio)
+    const parcial2 =
+        (prova2 * pesoProva + exercicio2 * pesoExercicio) /
+        (pesoProva + pesoExercicio)
+    mediaFinal = (parcial1 + parcial2) / 2
+    
+    // Saída
+    document.write(`Parcial 1: ${parcial1.toFixed(1)}<br/>`)
+    document.write(`Parcial 2: ${parcial2.toFixed(1)}<br/>`)
+    document.write(`Média Final: ${mediaFinal.toFixed(1)}<br/>`)
+</script>
